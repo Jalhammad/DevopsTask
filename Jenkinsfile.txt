@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        FRONTEND_IMAGE_NAME = 'aalhazmi-frontend'
-        BACKEND_IMAGE_NAME = 'aalhazmi-backend'
+        FRONTEND_IMAGE_NAME = 'jalhammad-frontend'
+        BACKEND_IMAGE_NAME = 'jalhammad-backend'
         SCANNER_IMAGE = 'aquasec/trivy:latest'
     }
     stages {
