@@ -35,7 +35,7 @@ pipeline {
         stage('Pushing images to ACR') {
             steps {
                 script {
-                    docker.withRegistry('https://devncai.azurecr.io', 'AzureCredential') {
+                    docker.withRegistry('https://devncai.azurecr.io', 'AzureCredentials') {
                         docker.image(env.BACKEND_IMAGE_NAME).push()
                         docker.image(env.FRONTEND_IMAGE_NAME).push()
                     }
