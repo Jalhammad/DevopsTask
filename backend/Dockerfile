@@ -1,12 +1,12 @@
-#Biuld stage
+# Build stage
 FROM golang:1.22.5 AS build
 WORKDIR /app
 COPY . .
 RUN go build -o main .
+RUN ls -la /app  # Check if the binary is created
+RUN chmod +x /app/main  # Ensure the binary is executable
 
- 
- 
-#finale image
+# Final image
 FROM scratch
 COPY --from=build /app/main /app/main
 USER 1001:1001
